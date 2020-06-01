@@ -3,6 +3,7 @@
                    factoryName="Spring Boot">
         <module name="search.main"/>
         <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.search.SearchApplication"/>
+        <option name="PROGRAM_PARAMETERS" value="search=&quot;1с&quot;"/>
         <option name="ALTERNATIVE_JRE_PATH"/>
         <method v="2">
             <option name="Make" enabled="true"/>

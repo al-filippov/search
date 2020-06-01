@@ -1,0 +1,15 @@
+{
+  "document": {
+    "_all": {
+      "enabled": false
+    },
+    "properties": {
+      "text": {
+        "type": "string",
+        "analyzer": "myanalyzer",
+        "searchAnalyzer": "myanalyzer",
+        "term_vector": "with_positions_offsets"
+      }
+    }
+  }
+}
