@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.elasticsearch.index.query.QueryBuilders.queryStringQuery;
 
@@ -43,7 +44,7 @@ public class ElasticService {
         final ElasticDocument elasticDocument = elasticRepository.findByPath(path);
         if (elasticDocument == null) {
             throw new IllegalArgumentException(
-                    String.format("The document with path '%s' is not exists"));
+                    String.format("The document with path '%s' is not exists", path));
         }
         elasticRepository.delete(elasticDocument);
         return new DocumentDto(elasticDocument);
@@ -64,13 +65,21 @@ public class ElasticService {
         final List<DocumentDto> documents = new ArrayList<>();
         while (stream.hasNext()) {
             final var searchHit = stream.next();
-            documents.add(new DocumentDto(searchHit.getContent(), searchHit.getScore()));
+            documents.add(new DocumentDto(searchHit.getContent(),
+                    searchHit.getHighlightField("text").stream()
+                            .map(str -> str.replaceAll("\n", "\n\t"))
+                            .collect(Collectors.joining("\n\t")),
+                    searchHit.getScore()));
         }
         return documents;
     }
 
+    public long getDocumentsCount() {
+        return elasticRepository.count();
+    }
+
     public long clear() {
-        final long total = elasticRepository.count();
+        final long total = getDocumentsCount();
         elasticRepository.deleteAll();
         return total;
     }

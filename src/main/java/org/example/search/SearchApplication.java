@@ -10,6 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.IntStream;
 
 @SpringBootApplication
 public class SearchApplication implements CommandLineRunner {
@@ -45,8 +47,14 @@ public class SearchApplication implements CommandLineRunner {
 
 	private void searchDocuments(String query) {
 		System.out.printf("Try to search documents based on the query '%s'%n", query);
-		elasticService.searchDocuments(query).forEach(doc ->
-				System.out.printf("Path %s; score %s %n", doc.getPath(), doc.getScore()));
+		final long totalDocs = elasticService.getDocumentsCount();
+		final List<DocumentDto> result = elasticService.searchDocuments(query);
+		System.out.printf("%nResult docs count: %s%n%n", totalDocs);
+		IntStream.range(0, result.size()).forEach(idx -> {
+			final DocumentDto doc = result.get(idx);
+			System.out.printf("%s - Path %s; score %s%n\t%s%n%n",
+					idx + 1, doc.getPath(), doc.getScore(), doc.getTextHighlight());
+		});
 	}
 
 	private void clearDocuments() {
