@@ -183,7 +183,7 @@ public class OwlService {
     public void main() throws OWLOntologyCreationException {
         InputStream in = null;
         try {
-            in = new FileInputStream(new File("Masha.owl"));
+            in = new FileInputStream(new File("ontology/Masha.owl"));
         } catch (FileNotFoundException ex) {
             System.out.println("Нет файла!");
         }
