@@ -1,6 +1,7 @@
 package org.example.search;
 
 import org.example.search.model.DocumentDto;
+import org.example.search.owl.OwlService;
 import org.example.search.service.ElasticService;
 import org.example.search.service.LoadService;
 import org.springframework.boot.CommandLineRunner;
@@ -15,13 +16,16 @@ import java.util.stream.IntStream;
 
 @SpringBootApplication
 public class SearchApplication implements CommandLineRunner {
-	private final ElasticService elasticService;
 	private final LoadService loadService;
+	private final ElasticService elasticService;
+	private final OwlService owlService;
 
 	public SearchApplication(ElasticService elasticService,
-							 LoadService loadService) {
+							 LoadService loadService,
+							 OwlService owlService) {
 		this.elasticService = elasticService;
 		this.loadService = loadService;
+		this.owlService = owlService;
 	}
 
 	public static void main(String[] args) {
