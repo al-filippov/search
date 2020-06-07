@@ -53,13 +53,13 @@ public class SearchApplication implements CommandLineRunner {
 		System.out.printf("Try to search documents based on the query '%s'%n", query);
 		final long totalDocs = elasticService.getDocumentsCount();
 		final List<DocumentDto> result = elasticService.searchDocuments(query);
-		System.out.printf("%nTotal docs count: %s%n", totalDocs);
-		System.out.printf("Result docs count: %s%n%n", result.size());
 		IntStream.range(0, result.size()).forEach(idx -> {
 			final DocumentDto doc = result.get(idx);
-			System.out.printf("%s - Path %s; score %s%n\t%s%n%n",
+			System.out.printf("%n%s - Path %s; score %s%n\t%s%n",
 					idx + 1, doc.getPath(), doc.getScore(), doc.getTextHighlight());
 		});
+		System.out.printf("%nTotal docs count: %s%n", totalDocs);
+		System.out.printf("Result docs count: %s%n%n", result.size());
 	}
 
 	private void ontoSearchDocuments(String query) {

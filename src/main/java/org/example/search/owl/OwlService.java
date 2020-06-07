@@ -239,18 +239,19 @@ public class OwlService {
 //    }
 
     public String getAdditionalTerms(String query) {
-        final String RELATION = "Термин_связан_с_термином";
+        final String OBJ_PROPERTY = "Термин_связан_с_термином";
+        final String IND_CLASS = "Термин";
         try (final OwlHelper owlHelper = new OwlHelper(Path.of("ontology/Masha.owl"))) {
             final Set<String> queryTerms = Arrays.stream(query.split(" "))
                     .map(String::toLowerCase)
                     .collect(Collectors.toSet());
-            final Set<String> ontoTerms = owlHelper.getIndividualsByClass("Термин").stream()
+            final Set<String> ontoTerms = owlHelper.getIndividualsByClass(IND_CLASS).stream()
                     .filter(term -> queryTerms.contains(term.toLowerCase()))
                     .collect(Collectors.toSet());
             final Set<String> result = Arrays.stream(query.split(" "))
                     .collect(Collectors.toSet());
             for (String term : ontoTerms) {
-                result.addAll(owlHelper.getObjectPropertyAssertionRangesByDomain(RELATION, term).stream()
+                result.addAll(owlHelper.getObjectPropertyAssertionRangesByDomain(OBJ_PROPERTY, term).stream()
                         .flatMap(ind -> Arrays.stream(ind.replaceAll("_", " ").split(" ")))
                         .collect(Collectors.toSet()));
             }
