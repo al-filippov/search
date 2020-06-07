@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-    <configuration default="false" name="SearchApplication (search)" type="SpringBootApplicationConfigurationType"
+    <configuration default="false" name="SearchApplication (load)" type="SpringBootApplicationConfigurationType"
                    factoryName="Spring Boot">
         <module name="search.main"/>
         <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.search.SearchApplication"/>
-        <option name="PROGRAM_PARAMETERS" value="search=&quot;бухгалтерия&quot;"/>
+        <option name="PROGRAM_PARAMETERS" value="load=&quot;./documents&quot;"/>
         <option name="ALTERNATIVE_JRE_PATH"/>
         <method v="2">
             <option name="Make" enabled="true"/>

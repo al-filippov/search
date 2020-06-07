@@ -6,182 +6,182 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/глеб/ontologies/2020/3/untitled-ontology-2">
-    <Prefix name="" IRI="http://www.semanticweb.org/глеб/ontologies/2020/3/untitled-ontology-2#"/>
+    <Prefix name="" IRI="http://www.semanticweb.org/глеб/ontologies/2020/3/untitled-ontology-2"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <NamedIndividual IRI="#Правонарушитель"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Документ_2"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#местонахождение_документа"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#название_документа"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#Описывается_в_документе"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Бухгалтерия"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Учетный_регистр"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#является_документом_Вида"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Электронный_документ"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1C_УПП"/>
+        <Class IRI="#Автоматизированная_система"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Автоматизированная_система_управления"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#ТерминВыраженВДокументе"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Мощность_термина"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1C"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#является_электронной_версией_документа"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Первичный_учетный_документ"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Льготы"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#ТерминБлизокКТермину"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Документ_1"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Бумажный_документ"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Налог"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#является_бумажной_версией_документа"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Документ_5"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Модуль_АСУ"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Марс_1С"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Контрагент"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Акционер"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Бухгалтер"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#Документ_связан_с_термином"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Документ"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Вид_документа"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Правообладатель"/>
+        <Class IRI="#Документ"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Инвестиция"/>
+        <Class IRI="#Модуль_АСУ"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Документ_4"/>
+        <Class IRI="#Термин"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Кредитор"/>
+        <Class IRI="#Электронный_документ"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Девиденты"/>
+        <ObjectProperty IRI="#Документ_связан_с_термином"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Рентабельность"/>
+        <ObjectProperty IRI="#Описывается_в_документе"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#дата_оформления_документа"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Модуль_контрол_прохождения_эл_счетов"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Хозяйствующий_субъект"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Поставщик"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Инвестор"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Акция"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Модуль_складского_учета"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Документ_3"/>
+        <ObjectProperty IRI="#Термин_связан_с_термином"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#описывает_автоматизированную_систему"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Термин"/>
+        <ObjectProperty IRI="#является_бумажной_версией_документа"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#является_документом_Вида"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#является_электронной_версией_документа"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Мощность_термина"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ТерминБлизокКТермину"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ТерминВыраженВДокументе"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#дата_оформления_документа"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#местонахождение_документа"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#название_документа"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Акционер"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Акция"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Аутсорсинг"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Покупатель"/>
+        <NamedIndividual IRI="#Бухгалтер"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Право"/>
+        <NamedIndividual IRI="#Бухгалтерия"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Автоматизированная_система"/>
+        <NamedIndividual IRI="#Девиденты"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Собственник"/>
+        <NamedIndividual IRI="#Документ_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Документ_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Документ_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Документ_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Документ_5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Инвестиция"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Инвестор"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Контрагент"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Кредит"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Кредитор"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Льготы"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Марс_1С"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Модуль_комплектации_и_снабжения"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Учет"/>
+        <NamedIndividual IRI="#Модуль_контрол_прохождения_эл_счетов"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Модуль_складского_учета"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Налог"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Первичный_учетный_документ"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Покупатель"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Поставщик"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Право"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Правонарушитель"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Правообладатель"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Прибыль"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#Термин_связан_с_термином"/>
+        <NamedIndividual IRI="#Рентабельность"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Кредит"/>
+        <NamedIndividual IRI="#Собственник"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Учет"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Учетный_регистр"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Хозяйствующий_субъект"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1С"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1С_УПП"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Автоматизированная_система_управления"/>
@@ -356,11 +356,11 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Термин"/>
-        <NamedIndividual IRI="#1C"/>
+        <NamedIndividual IRI="#1С"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Автоматизированная_система"/>
-        <NamedIndividual IRI="#1C_УПП"/>
+        <NamedIndividual IRI="#1С_УПП"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Термин_связан_с_термином"/>
@@ -739,63 +739,63 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Термин_связан_с_термином"/>
-        <NamedIndividual IRI="#1C"/>
+        <NamedIndividual IRI="#1С"/>
         <NamedIndividual IRI="#Бухгалтер"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Термин_связан_с_термином"/>
-        <NamedIndividual IRI="#1C"/>
+        <NamedIndividual IRI="#1С"/>
         <NamedIndividual IRI="#Бухгалтерия"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Термин_связан_с_термином"/>
-        <NamedIndividual IRI="#1C"/>
+        <NamedIndividual IRI="#1С"/>
         <NamedIndividual IRI="#Контрагент"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Термин_связан_с_термином"/>
-        <NamedIndividual IRI="#1C"/>
+        <NamedIndividual IRI="#1С"/>
         <NamedIndividual IRI="#Кредит"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Термин_связан_с_термином"/>
-        <NamedIndividual IRI="#1C"/>
+        <NamedIndividual IRI="#1С"/>
         <NamedIndividual IRI="#Налог"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Термин_связан_с_термином"/>
-        <NamedIndividual IRI="#1C"/>
+        <NamedIndividual IRI="#1С"/>
         <NamedIndividual IRI="#Первичный_учетный_документ"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Термин_связан_с_термином"/>
-        <NamedIndividual IRI="#1C"/>
+        <NamedIndividual IRI="#1С"/>
         <NamedIndividual IRI="#Прибыль"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Описывается_в_документе"/>
-        <NamedIndividual IRI="#1C_УПП"/>
+        <NamedIndividual IRI="#1С_УПП"/>
         <NamedIndividual IRI="#Документ_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Описывается_в_документе"/>
-        <NamedIndividual IRI="#1C_УПП"/>
+        <NamedIndividual IRI="#1С_УПП"/>
         <NamedIndividual IRI="#Документ_2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Описывается_в_документе"/>
-        <NamedIndividual IRI="#1C_УПП"/>
+        <NamedIndividual IRI="#1С_УПП"/>
         <NamedIndividual IRI="#Документ_3"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#местонахождение_документа"/>
         <NamedIndividual IRI="#Документ_4"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Северный венец 32</Literal>
+        <Literal>Северный венец 32</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#название_документа"/>
         <NamedIndividual IRI="#Документ_4"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Приказ на отчисление StudentName</Literal>
+        <Literal>Приказ на отчисление StudentName</Literal>
     </DataPropertyAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="#Описывается_в_документе"/>
@@ -864,5 +864,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

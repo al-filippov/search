@@ -53,12 +53,19 @@ public class SearchApplication implements CommandLineRunner {
 		System.out.printf("Try to search documents based on the query '%s'%n", query);
 		final long totalDocs = elasticService.getDocumentsCount();
 		final List<DocumentDto> result = elasticService.searchDocuments(query);
-		System.out.printf("%nResult docs count: %s%n%n", totalDocs);
+		System.out.printf("%nTotal docs count: %s%n", totalDocs);
+		System.out.printf("Result docs count: %s%n%n", result.size());
 		IntStream.range(0, result.size()).forEach(idx -> {
 			final DocumentDto doc = result.get(idx);
 			System.out.printf("%s - Path %s; score %s%n\t%s%n%n",
 					idx + 1, doc.getPath(), doc.getScore(), doc.getTextHighlight());
 		});
+	}
+
+	private void ontoSearchDocuments(String query) {
+		System.out.printf("Try to extend the query '%s'%n", query);
+		final String extendedQuery = owlService.getAdditionalTerms(query);
+		searchDocuments(extendedQuery);
 	}
 
 	private void clearDocuments() {
@@ -77,9 +84,9 @@ public class SearchApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) {
 		System.out.println("Hello!");
-		if (args.length != 1) {
-			System.err.println("You must specify one argument");
-			System.exit(-1);
+		if (args.length == 0) {
+			printHelp();
+			System.exit(0);
 		}
 		try {
 			final String[] arg = args[0].split("=");
@@ -89,6 +96,9 @@ public class SearchApplication implements CommandLineRunner {
 					break;
 				case "search":
 					searchDocuments(arg[1]);
+					break;
+				case "onto-search":
+					ontoSearchDocuments(arg[1]);
 					break;
 				case "clear":
 					clearDocuments();
